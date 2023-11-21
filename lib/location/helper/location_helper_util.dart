@@ -42,18 +42,28 @@ class LocationHelperUtil {
     }
   }
 
-  ///to enable the location service
+  /// Enables or disables service in the background mode.
+  Future<bool> enableBackgroundMode({required bool isEnabled}) async {
+    return await Location().enableBackgroundMode(enable: isEnabled);
+  }
+
+  ///To check if the background mode enabled
+  Future<bool> isBackgroundModeEnabled() async {
+    return await Location().isBackgroundModeEnabled();
+  }
+
+  ///To enable the location service
   ///GPS Service
   Future<bool> requestEnableLocationService() async {
     return await Location().requestService();
   }
 
-  ///to check if the GPS is enabled
+  ///To check if the GPS is enabled
   Future<bool> isLocationServiceEnabled() async {
     return await Location().serviceEnabled();
   }
 
-  ///to get the distance between the 2 points for latitudes and longitudes
+  ///To get the distance between the 2 points for latitudes and longitudes
   double calculateDistanceBetweenTwoPoints({required double latitude1, required double longitude1, required double latitude2, required double longitude2}) {
     var p = 0.017453292519943295;
     var c = cos;
