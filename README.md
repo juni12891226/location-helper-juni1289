@@ -9,7 +9,7 @@ A Flutter package to easily access the Location params on the go, without the ne
 * Check for GPS, so you don't need to turn it on if required for getting the Location
 * Returns a helper model, so you will get all information about your location data as well as permission results
 * Easy to manage, One Liner you only have to write one line of code to get the location
-* This package depends on *https://pub.dev/packages/location* :)
+* This package depends on *https://pub.dev/packages/location* & *https://pub.dev/packages/permission_handler* :)
 
 ## Additional information
 
